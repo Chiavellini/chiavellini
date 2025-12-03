@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ON3 - All-In-One Supplement Gummies</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts - Anthropic Style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        :root {
+            --primary-color: #007AFF;
+            --secondary-color: #5856D6;
+            --accent-color: #34C759;
+            --dark-color: #000000;
+            --light-bg: #F2F2F7;
+            --text-muted: #8E8E93;
+            --card-bg: rgba(255, 255, 255, 0.8);
+            --ios-blur: blur(20px) saturate(180%);
+            --navbar-bg: rgba(255, 255, 255, 0.8);
+            --navbar-border: rgba(0, 0, 0, 0.1);
+            --text-color: #000000;
+            --footer-bg: #000000;
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #0A84FF;
+            --secondary-color: #5E5CE6;
+            --accent-color: #30D158;
+            --dark-color: #FFFFFF;
+            --light-bg: #000000;
+            --text-muted: #8E8E93;
+            --card-bg: rgba(28, 28, 30, 0.8);
+            --navbar-bg: rgba(0, 0, 0, 0.8);
+            --navbar-border: rgba(255, 255, 255, 0.1);
+            --text-color: #FFFFFF;
+            --footer-bg: #000000;
+        }
+        
+        [data-theme="dark"] body {
+            background: #000000;
+            color: var(--text-color);
+        }
+        
+        [data-theme="dark"] .navbar {
+            background: var(--navbar-bg);
+            border-bottom-color: var(--navbar-border);
+        }
+        
+        [data-theme="dark"] .testimonial-section {
+            background: #1C1C1E;
+        }
+        
+        [data-theme="dark"] .testimonial-card {
+            background: rgba(44, 44, 46, 0.8);
+            border-left-color: var(--primary-color);
+        }
+        
+        [data-theme="dark"] .section-subtitle {
+            color: var(--text-muted);
+        }
+        
+        [data-theme="dark"] .feature-card {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        [data-theme="dark"] .product-card {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        [data-theme="dark"] .product-section {
+            background: #000000;
+        }
+        
+        [data-theme="dark"] .card-body {
+            color: var(--text-color);
+        }
+        
+        [data-theme="dark"] h5, 
+        [data-theme="dark"] h4, 
+        [data-theme="dark"] h3, 
+        [data-theme="dark"] h2, 
+        [data-theme="dark"] h1 {
+            color: var(--text-color);
+        }
+        
+        [data-theme="dark"] p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        [data-theme="dark"] .text-primary {
+            color: var(--primary-color) !important;
+        }
+        
+        body {
+            font-family: 'Lora', Georgia, serif;
+            color: var(--text-color);
+            background: var(--light-bg);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        h1, h2, h3, h4, h5, h6, .navbar-brand {
+            font-family: 'Poppins', Arial, sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+        
+        .navbar {
+            background: var(--navbar-bg);
+            backdrop-filter: var(--ios-blur);
+            -webkit-backdrop-filter: var(--ios-blur);
+            box-shadow: 0 0.5px 0 var(--navbar-border);
+            border-bottom: 0.5px solid var(--navbar-border);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color) !important;
+            letter-spacing: -1px;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            color: var(--text-color) !important;
+            transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+        
+        .theme-toggle {
+            background: var(--card-bg);
+            border: 0.5px solid var(--navbar-border);
+            border-radius: 20px;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-left: 15px;
+            backdrop-filter: var(--ios-blur);
+            -webkit-backdrop-filter: var(--ios-blur);
+            font-size: 1.2rem;
+        }
+        
+        .theme-toggle:hover {
+            transform: scale(1.05);
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .theme-toggle:active {
+            transform: scale(0.95);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 140px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-image-container {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        @media (max-width: 991px) {
+            .hero-image {
+                max-width: 80%;
+                margin-top: 30px;
+            }
+        }
+        
+        .btn-primary-custom {
+            background: white;
+            color: var(--primary-color);
+            border: none;
+            padding: 14px 32px;
+            font-weight: 600;
+            border-radius: 25px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-primary-custom:hover {
+            transform: scale(0.97);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        .btn-primary-custom:active {
+            transform: scale(0.95);
+        }
+        
+        .btn-secondary-custom {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1.5px solid rgba(255, 255, 255, 0.5);
+            padding: 14px 32px;
+            font-weight: 600;
+            border-radius: 25px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .btn-secondary-custom:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.8);
+            transform: scale(0.97);
+        }
+        
+        .btn-secondary-custom:active {
+            transform: scale(0.95);
+        }
+        
+        .feature-card {
+            border: none;
+            border-radius: 25px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: var(--card-bg);
+            backdrop-filter: var(--ios-blur);
+            -webkit-backdrop-filter: var(--ios-blur);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            border: 0.5px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .feature-card:active {
+            transform: translateY(-4px) scale(0.98);
+        }
+        
+        .feature-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+        
+        .product-section {
+            background: var(--light-bg);
+            padding: 80px 0;
+        }
+        
+        .product-card {
+            background: var(--card-bg);
+            backdrop-filter: var(--ios-blur);
+            -webkit-backdrop-filter: var(--ios-blur);
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+            border: 0.5px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .product-card:active {
+            transform: translateY(-4px) scale(0.98);
+        }
+        
+        .product-image {
+            height: 250px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: white;
+        }
+        
+        .testimonial-section {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .testimonial-card {
+            background: var(--light-bg);
+            border-radius: 25px;
+            padding: 30px;
+            border-left: 4px solid var(--primary-color);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateX(5px);
+        }
+        
+        .benefits-section {
+            background: linear-gradient(135deg, var(--accent-color) 0%, #30D158 100%);
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .footer {
+            background: #000000;
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .social-icon {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0 10px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-block;
+        }
+        
+        .social-icon:hover {
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+        
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 50px;
+            font-weight: 400;
+        }
+        
+        /* iOS-style smooth scrolling */
+        @media (prefers-reduced-motion: no-preference) {
+            * {
+                scroll-behavior: smooth;
+            }
+        }
+        
+        /* iOS-style button press effect */
+        .btn-primary-custom.btn-sm {
+            padding: 10px 24px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">ON3</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#benefits">Benefits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                            <span id="themeIcon">🌙</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="display-3 fw-bold mb-4">All You Need. One Serving.</h1>
+                    <p class="lead mb-4">All your daily supplement requirements met in a single serving. No more juggling tens of flasks and bottles—those days are outdated. ON3 delivers everything you need in a single pack.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#products" class="btn btn-primary-custom">Shop Now</a>
+                        <a href="#ingredients" class="btn btn-secondary-custom">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-image-container">
+                    <img src="images/hero-gummies.jpg" alt="ON3 All-In-One Supplement Gummies" class="hero-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            📦
+                        </div>
+                        <h4>All-In-One Formula</h4>
+                        <p>All your essential vitamins and supplements in one convenient pack. Different colored gummies contain different supplements—no more multiple bottles or packs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            ✅
+                        </div>
+                        <h4>100% Natural</h4>
+                        <p>Made with premium natural ingredients and no artificial additives</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            😊
+                        </div>
+                        <h4>Delicious Taste</h4>
+                        <p>Enjoy your daily vitamins with flavors you'll actually love</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ingredients Section -->
+    <section id="ingredients" class="py-5" style="background: white;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">What's Inside Every ON3 Pack</h2>
+                <p class="section-subtitle">Different colored gummies contain different supplements—all in one convenient pack</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="d-flex align-items-start p-4" style="background: var(--card-bg); backdrop-filter: var(--ios-blur); -webkit-backdrop-filter: var(--ios-blur); border-radius: 25px; height: 100%; border: 0.5px solid rgba(0, 0, 0, 0.05); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                        <div class="me-3" style="font-size: 2.5rem;">
+                            ⚡
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-2">Creatine</h5>
+                            <p class="mb-0">Supports muscle strength and power output for enhanced performance</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="d-flex align-items-start p-4" style="background: var(--card-bg); backdrop-filter: var(--ios-blur); -webkit-backdrop-filter: var(--ios-blur); border-radius: 25px; height: 100%; border: 0.5px solid rgba(0, 0, 0, 0.05); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                        <div class="me-3" style="font-size: 2.5rem;">
+                            🌸
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-2">Ashwagandha</h5>
+                            <p class="mb-0">Adaptogenic herb that helps reduce stress and support overall wellness</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="d-flex align-items-start p-4" style="background: var(--card-bg); backdrop-filter: var(--ios-blur); -webkit-backdrop-filter: var(--ios-blur); border-radius: 25px; height: 100%; border: 0.5px solid rgba(0, 0, 0, 0.05); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                        <div class="me-3" style="font-size: 2.5rem;">
+                            💊
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-2">Multivitamins</h5>
+                            <p class="mb-0">Comprehensive blend of essential vitamins for daily nutrition</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="d-flex align-items-start p-4" style="background: var(--card-bg); backdrop-filter: var(--ios-blur); -webkit-backdrop-filter: var(--ios-blur); border-radius: 25px; height: 100%; border: 0.5px solid rgba(0, 0, 0, 0.05); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                        <div class="me-3" style="font-size: 2.5rem;">
+                            ❤️
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-2">Collagen</h5>
+                            <p class="mb-0">Supports healthy skin, hair, nails, and joint health</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="d-flex align-items-start p-4" style="background: var(--card-bg); backdrop-filter: var(--ios-blur); -webkit-backdrop-filter: var(--ios-blur); border-radius: 25px; height: 100%; border: 0.5px solid rgba(0, 0, 0, 0.05); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                        <div class="me-3" style="font-size: 2.5rem;">
+                            🏋️
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-2">BCAAs</h5>
+                            <p class="mb-0">Branched-chain amino acids for muscle recovery and growth</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="d-flex align-items-start p-4" style="background: var(--card-bg); backdrop-filter: var(--ios-blur); -webkit-backdrop-filter: var(--ios-blur); border-radius: 25px; height: 100%; border: 0.5px solid rgba(0, 0, 0, 0.05); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                        <div class="me-3" style="font-size: 2.5rem;">
+                            💧
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-2">Omega-3 Fish Oils</h5>
+                            <p class="mb-0">Essential fatty acids for heart, brain, and joint health</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 offset-md-3 offset-lg-4">
+                    <div class="d-flex align-items-start p-4" style="background: var(--card-bg); backdrop-filter: var(--ios-blur); -webkit-backdrop-filter: var(--ios-blur); border-radius: 25px; height: 100%; border: 0.5px solid rgba(0, 0, 0, 0.05); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                        <div class="me-3" style="font-size: 2.5rem;">
+                            ❤️
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-2">Iron</h5>
+                            <p class="mb-0">Essential mineral for energy production and oxygen transport</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="product-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Our Products</h2>
+                <p class="section-subtitle">Choose the perfect formula for your lifestyle</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-5">
+                    <div class="product-card">
+                        <div class="product-image">
+                            ❤️
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title">ON3 Daily</h5>
+                            <p class="card-text">Complete wellness support for your everyday health. All your daily supplement requirements in one convenient pack. Perfect for general wellness and daily nutrition.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="h5 mb-0 text-primary">$34.99</span>
+                                <a href="wellness-supplements.html" class="btn btn-primary-custom btn-sm" target="_blank">View Supplements</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-5">
+                    <div class="product-card">
+                        <div class="product-image">
+                            🏋️
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title">ON3 Fit</h5>
+                            <p class="card-text">Optimized for gymgoers and athletes. Enhanced performance and recovery formula with targeted supplements for strength, muscle growth, and endurance.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="h5 mb-0 text-primary">$39.99</span>
+                                <a href="gym-supplements.html" class="btn btn-primary-custom btn-sm" target="_blank">View Supplements</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title text-white">Why Choose ON3?</h2>
+                <p class="lead text-white">All the vitamins and supplements you need in one convenient pack</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3 text-center">
+                    <span style="font-size: 3rem; margin-bottom: 20px; display: block;">✓</span>
+                    <h5>One Pack, Everything</h5>
+                    <p>Different colored gummies contain different supplements—all in one pack. No need for various bottles or pills.</p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center">
+                    <span style="font-size: 3rem; margin-bottom: 20px; display: block;">✓</span>
+                    <h5>No Sugar Added</h5>
+                    <p>Sweetened naturally without compromising on taste</p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center">
+                    <span style="font-size: 3rem; margin-bottom: 20px; display: block;">✓</span>
+                    <h5>Non-GMO</h5>
+                    <p>Certified non-GMO ingredients you can trust</p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center">
+                    <span style="font-size: 3rem; margin-bottom: 20px; display: block;">✓</span>
+                    <h5>Made in USA</h5>
+                    <p>Manufactured in FDA-registered facilities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="about" class="testimonial-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-subtitle">Real feedback from real customers</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="mb-3">
+                            <span style="color: #FFD700;">⭐</span>
+                            <span style="color: #FFD700;">⭐</span>
+                            <span style="color: #FFD700;">⭐</span>
+                            <span style="color: #FFD700;">⭐</span>
+                            <span style="color: #FFD700;">⭐</span>
+                        </div>
+                        <p>"These gummies are amazing! They taste great and I've noticed a real difference in my energy levels."</p>
+                        <strong>- Sarah M.</strong>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="mb-3">
+                            <span style="color: #FFD700;">⭐</span>
+                            <span style="color: #FFD700;">⭐</span>
+                            <span style="color: #FFD700;">⭐</span>
+                            <span style="color: #FFD700;">⭐</span>
+                            <span style="color: #FFD700;">⭐</span>
+                        </div>
+                        <p>"Finally, vitamins that don't taste like medicine! My kids love them too."</p>
+                        <strong>- Michael T.</strong>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="mb-3">
+                            <span style="color: #FFD700;">⭐</span>
+                            <span style="color: #FFD700;">⭐</span>
+                            <span style="color: #FFD700;">⭐</span>
+                            <span style="color: #FFD700;">⭐</span>
+                            <span style="color: #FFD700;">⭐</span>
+                        </div>
+                        <p>"Best supplement brand I've tried. The quality is outstanding and the results speak for themselves."</p>
+                        <strong>- Emily R.</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h4>ON3</h4>
+                    <p>All your essential vitamins and supplements in one convenient pack. Different colored gummies contain different supplements—no need for various packs of different gummies and pills.</p>
+                    <div class="mt-3">
+                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white-50 text-decoration-none">Home</a></li>
+                        <li><a href="#products" class="text-white-50 text-decoration-none">Products</a></li>
+                        <li><a href="#benefits" class="text-white-50 text-decoration-none">Benefits</a></li>
+                        <li><a href="#about" class="text-white-50 text-decoration-none">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Us</h5>
+                    <p class="mb-2"><i class="bi bi-envelope"></i> hello@on3.com</p>
+                    <p class="mb-2"><i class="bi bi-telephone"></i> 1-800-ON3-HELP</p>
+                    <p><i class="bi bi-geo-alt"></i> 123 Health Street, Wellness City</p>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 ON3. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Smooth Scroll -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+    
+    <!-- Theme Toggle -->
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const html = document.documentElement;
+        
+        // Cargar tema guardado o usar light por defecto
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+        
+        // Función para actualizar el icono del tema
+        function updateThemeIcon(theme) {
+            if (theme === 'dark') {
+                themeIcon.textContent = '☀️';
+            } else {
+                themeIcon.textContent = '🌙';
+            }
+        }
+        
+        // Toggle del tema
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+    </script>
+</body>
+</html>

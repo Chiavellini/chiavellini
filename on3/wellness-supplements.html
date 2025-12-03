@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ON3 Wellness - Supplements</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts - Anthropic Style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #6366F1;
+            --secondary-color: #8B5CF6;
+            --accent-color: #10B981;
+            --dark-color: #1F2937;
+            --light-bg: #F9FAFB;
+            --text-muted: #6B7280;
+        }
+        
+        body {
+            font-family: 'Lora', Georgia, serif;
+            color: var(--dark-color);
+            background: var(--light-bg);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', Arial, sans-serif;
+            font-weight: 600;
+        }
+        
+        .header-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 60px 0 40px;
+            margin-bottom: 50px;
+        }
+        
+        .supplement-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border: none;
+        }
+        
+        .supplement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .supplement-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .btn-return {
+            background: white;
+            color: var(--primary-color);
+            border: none;
+            padding: 12px 40px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-return:hover {
+            background: var(--light-bg);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .benefit-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .benefit-list li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .benefit-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="display-4 fw-bold mb-3">ON3 Daily</h1>
+                    <p class="lead">Complete wellness support for your everyday health. Different colored gummies contain different supplements, all carefully selected for general wellness and daily nutrition.</p>
+                </div>
+                <div class="col-md-4 text-md-end mt-4 mt-md-0">
+                    <a href="#" class="btn-return" onclick="closeWindow(); return false;">
+                        <i class="bi bi-arrow-left"></i> Return to Main
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Supplements Section -->
+    <div class="container mb-5">
+        <div class="row g-4">
+            <!-- Multivitamins Card -->
+            <div class="col-md-6 col-lg-4">
+                <div class="supplement-card">
+                    <div class="text-center mb-4">
+                        <span class="supplement-icon">💊</span>
+                    </div>
+                    <h3 class="text-center mb-3">Multivitamins</h3>
+                    <p class="text-center text-muted mb-4">A comprehensive blend of essential vitamins for optimal daily nutrition.</p>
+                    <h5 class="mb-3">Key Benefits:</h5>
+                    <ul class="benefit-list">
+                        <li>Fills nutritional gaps</li>
+                        <li>Supports immune function</li>
+                        <li>Promotes energy production</li>
+                        <li>Maintains overall health</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Collagen Card -->
+            <div class="col-md-6 col-lg-4">
+                <div class="supplement-card">
+                    <div class="text-center mb-4">
+                        <span class="supplement-icon">❤️</span>
+                    </div>
+                    <h3 class="text-center mb-3">Collagen</h3>
+                    <p class="text-center text-muted mb-4">The most abundant protein in your body, essential for skin, hair, and joints.</p>
+                    <h5 class="mb-3">Key Benefits:</h5>
+                    <ul class="benefit-list">
+                        <li>Promotes healthy skin</li>
+                        <li>Strengthens hair and nails</li>
+                        <li>Supports joint health</li>
+                        <li>Improves skin elasticity</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Omega-3 Fish Oils Card -->
+            <div class="col-md-6 col-lg-4">
+                <div class="supplement-card">
+                    <div class="text-center mb-4">
+                        <span class="supplement-icon">💧</span>
+                    </div>
+                    <h3 class="text-center mb-3">Omega-3 Fish Oils</h3>
+                    <p class="text-center text-muted mb-4">Essential fatty acids crucial for heart, brain, and joint health.</p>
+                    <h5 class="mb-3">Key Benefits:</h5>
+                    <ul class="benefit-list">
+                        <li>Supports heart health</li>
+                        <li>Promotes brain function</li>
+                        <li>Reduces inflammation</li>
+                        <li>Maintains joint flexibility</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Zinc Card -->
+            <div class="col-md-6 col-lg-4">
+                <div class="supplement-card">
+                    <div class="text-center mb-4">
+                        <span class="supplement-icon">🛡️</span>
+                    </div>
+                    <h3 class="text-center mb-3">Zinc</h3>
+                    <p class="text-center text-muted mb-4">An essential mineral that supports immune function and overall wellness.</p>
+                    <h5 class="mb-3">Key Benefits:</h5>
+                    <ul class="benefit-list">
+                        <li>Boosts immune system</li>
+                        <li>Supports wound healing</li>
+                        <li>Promotes healthy skin</li>
+                        <li>Enhances cognitive function</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Vitamin D Card -->
+            <div class="col-md-6 col-lg-4">
+                <div class="supplement-card">
+                    <div class="text-center mb-4">
+                        <span class="supplement-icon">☀️</span>
+                    </div>
+                    <h3 class="text-center mb-3">Vitamin D</h3>
+                    <p class="text-center text-muted mb-4">Essential for bone health, immune function, and overall wellness.</p>
+                    <h5 class="mb-3">Key Benefits:</h5>
+                    <ul class="benefit-list">
+                        <li>Supports bone health</li>
+                        <li>Strengthens immune system</li>
+                        <li>Improves mood and energy</li>
+                        <li>Promotes calcium absorption</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Vitamin C Card -->
+            <div class="col-md-6 col-lg-4">
+                <div class="supplement-card">
+                    <div class="text-center mb-4">
+                        <span class="supplement-icon">🍊</span>
+                    </div>
+                    <h3 class="text-center mb-3">Vitamin C</h3>
+                    <p class="text-center text-muted mb-4">A powerful antioxidant that supports immune health and skin vitality.</p>
+                    <h5 class="mb-3">Key Benefits:</h5>
+                    <ul class="benefit-list">
+                        <li>Strengthens immune system</li>
+                        <li>Promotes collagen production</li>
+                        <li>Acts as powerful antioxidant</li>
+                        <li>Supports skin health</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Return Button Section -->
+    <div class="container mb-5 text-center">
+        <a href="#" class="btn-return" onclick="closeWindow(); return false;">
+            <i class="bi bi-arrow-left"></i> Return to Main Page
+        </a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Close Window Function -->
+    <script>
+        function closeWindow() {
+            window.close();
+            setTimeout(function() {
+                if (!document.hidden) {
+                    window.history.back();
+                }
+            }, 100);
+        }
+    </script>
+</body>
+</html>

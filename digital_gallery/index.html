@@ -3,16 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <title>Galaxy Art Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <canvas id="galaxyCanvas"></canvas>
 
+  <a class="return-home" href="../index.html">← Back to studio</a>
+
   <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
     <img class="theme-icon" src="art/IMG_0479-removebg-preview.png" alt="Theme icon" />
   </button>
 
-  <div class="corner-label">Move the mouse • Click a star to open artwork</div>
 
   <!-- Lightbox for fullscreen-ish image -->
   <div class="lightbox hidden" id="lightbox">

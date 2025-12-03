@@ -72,15 +72,15 @@ updateThemeUI();
 
 // 👇 Put your drawings here
 const artworks = [
-  { src: "art/IMG_0467.jpg", title: "Artwork 1", color: "#ff6b6b" },
-  { src: "art/IMG_0468.jpg", title: "Artwork 2", color: "#ffd43b" },
-  { src: "art/IMG_0469.jpg", title: "Artwork 3", color: "#b197fc" },
-  { src: "art/IMG_0470.jpg", title: "Artwork 4", color: "#51cf66" },
-  { src: "art/IMG_0471.jpg", title: "Artwork 5", color: "#ff8787" },
-  { src: "art/IMG_0472.jpg", title: "Artwork 6", color: "#74c0fc" },
-  { src: "art/IMG_0473.jpg", title: "Artwork 7", color: "#ffafcc" },
-  { src: "art/IMG_0474.jpg", title: "Artwork 8", color: "#f4a261" },
-  { src: "art/IMG_0475.jpg", title: "Artwork 9", color: "#4dd0e1" }
+  { src: "art/IMG_0467.jpg", title: "zyn homies", color: "#ff6b6b" },
+  { src: "art/IMG_0468.jpg", title: "gran sueño", color: "#ffd43b" },
+  { src: "art/IMG_0469.jpg", title: "Mao", color: "#b197fc" },
+  { src: "art/IMG_0470.jpg", title: "figura", color: "#51cf66" },
+  { src: "art/IMG_0471.jpg", title: "sonder", color: "#ff8787" },
+  { src: "art/IMG_0472.jpg", title: "mindChatter", color: "#74c0fc" },
+  { src: "art/IMG_0473.jpg", title: "falll", color: "#ffafcc" },
+  { src: "art/IMG_0474.jpg", title: "love", color: "#f4a261" },
+  { src: "art/IMG_0475.jpg", title: "reverie", color: "#4dd0e1" }
 ];
 
 const nodes = [];
